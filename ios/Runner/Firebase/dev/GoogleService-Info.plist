@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>532669712992-rqok7ifoga54i431a1426mhqcu14c4u6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCULiL0K-J-T8XOWn52-MF_oA-YwRDvP58</string>
+	<key>GCM_SENDER_ID</key>
+	<string>532669712992</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.devshubh69.snapgram.dev</string>
+	<key>PROJECT_ID</key>
+	<string>snapgram-dev-4e0f0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>snapgram-dev-4e0f0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:532669712992:ios:ae700b6179777fb38f5105</string>
+</dict>
+</plist>

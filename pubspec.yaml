@@ -1,0 +1,114 @@
+name: snapgram
+description: Offline-first Flutter Instagram clone with Supabase and PowerSync.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.3.1 <4.0.0"
+
+dependencies:
+  bloc: 
+  flutter:
+    sdk: flutter
+  flutter_bloc: 
+  flutter_localizations:
+    sdk: flutter
+  intl: 
+  animations:
+  # app_ui:
+  #   path: packages/app_ui
+  async: 
+  cached_memory_image: 
+  cached_network_image: 
+  carousel_slider: 
+  # chats_repository:
+    # path: packages/chats_repository
+  collection: 
+  # database_client:
+    # path: packages/database_client
+  env:
+    path: packages/env
+  equatable: 
+  fast_immutable_collections: 
+  firebase_core: ^2.31.1
+  firebase_messaging: 
+  # firebase_notifications_client:
+    # path: packages/notifications_client/firebase_notifications_client
+  # firebase_remote_config_repository:
+    # path: packages/firebase_remote_config_repository
+  flex_color_scheme: 
+  flutter_animate: 
+  flutter_markdown: 
+  flutter_portal: 
+  flutter_staggered_grid_view: 
+  # form_fields:
+    # path: packages/form_fields
+  get_it: 
+  go_router: 
+  google_sign_in: 
+  hydrated_bloc: 
+  # insta_blocks:
+    # path: packages/insta_blocks
+  # instagram_blocks_ui:
+    # path: packages/instagram_blocks_ui
+  # inview_notifier_list:
+  #   git: https://github.com/Gambley1/inview_notifier_list
+  json_annotation: 
+  lottie: 
+  # notifications_repository:
+    # path: packages/notifications_repository
+  ogp_data_extract: 
+  palette_generator: 
+  path_provider: 
+  # persistent_storage:
+    # path: packages/storage/persistent_storage
+  # posts_repository:
+    # path: packages/posts_repository
+  powersync_repository:
+    path: packages/powersync_repository
+  scrollable_positioned_list: 
+  # search_repository:
+    # path: packages/search_repository
+  shared:
+    path: packages/shared
+  shimmer: 
+  slang: 
+  slang_flutter: 
+  sliver_tools: 
+  sprung: 
+  # stories_editor:
+    # path: packages/stories_editor
+  # stories_repository:
+    # path: packages/stories_repository
+  story_view: 
+  # supabase_authentication_client:
+    # path: packages/authentication_client/supabase_authentication_client
+  timeago: 
+  # token_storage:
+    # path: packages/authentication_client/token_storage
+  url_launcher: 
+  # user_repository:
+    # path: packages/user_repository
+  vector_math: 
+  visibility_detector: 
+
+
+dev_dependencies:
+  bloc_test: ^9.1.7
+  flutter_test:
+    sdk: flutter
+  mocktail: 
+  very_good_analysis: 
+  slang_build_runner:
+  json_serializable:
+  build_verify:
+  build_runner:
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+# dependency_overrides:
+#   fading_edge_scrollview: ^4.1.1
+
+
