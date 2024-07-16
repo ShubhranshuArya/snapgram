@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared/shared.dart';
 import 'package:snapgram/app/di/di.dart';
 import 'package:snapgram/l10n/l10n.dart';
+import 'package:snapgram/login/login.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: SafeArea(child: Scaffold(body: Text(getIt<AppFlavor>().getEnv(Env.iOSClientId)),)),
+      home: const LoginPage(),
     );
   }
 }
