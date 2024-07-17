@@ -15,8 +15,8 @@ dependencies:
     sdk: flutter
   intl: 
   animations:
-  # app_ui:
-  #   path: packages/app_ui
+  app_ui:
+    path: packages/app_ui
   async: 
   cached_memory_image: 
   cached_network_image: 
