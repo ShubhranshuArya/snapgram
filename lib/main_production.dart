@@ -7,7 +7,7 @@ void main() {
   // const apiRepository = ApiRepository();
   bootstrap(
     (powerSyncRepository) {
-      return const App();
+      return const AppView();
     },
     options: DefaultFirebaseOptions.currentPlatform,
     appFlavor: AppFlavor.production()

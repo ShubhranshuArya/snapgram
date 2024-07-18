@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:app_ui/app_ui.dart';
 import 'package:bloc/bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/widgets.dart';
@@ -52,6 +53,8 @@ Future<void> bootstrap(
       await powerSyncRepository.initialize();
 
       runApp(await builder(powerSyncRepository));
+
+      SystemUiOverlayTheme.setPortraitOrientation();
 
     },
     (error, stack) {
