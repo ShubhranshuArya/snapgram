@@ -1,0 +1,455 @@
+{
+  "@@locale": "ru",
+  "feedAppBarTitle": "Просмотр ленты",
+  "@feedAppBarTitle": {
+    "description": "Текст для заголовка страницы Просмотр ленты"
+  },
+  "homeNavBarItemLabel": "Лента",
+  "@homeNavBarItemLabel": {
+    "description": "Подсказка при зажатии иконки дом на нижней навигационной панели"
+  },
+  "searchNavBarItemLabel": "Поиск",
+  "@searchNavBarItemLabel": {
+    "description": "Подсказка при зажатии иконки поиск на нижней навигационной панели"
+  },
+  "createMediaNavBarItemLabel": "Создать медиа",
+  "@createMediaNavBarItemLabel": {
+    "description": "Подсказка при зажатии иконки плюс на нижней навигационной панели"
+  },
+  "reelsNavBarItemLabel": "Рилс",
+  "@reelsNavBarItemLabel": {
+    "description": "Подсказка при зажатии иконки файла на нижней навигационной панели"
+  },
+  "profileNavBarItemLabel": "Профиль",
+  "@profileNavBarItemLabel": {
+    "description": "Подсказка при зажатии иконки профиля на нижней навигационной панели"
+  },
+  "originalAudioText": "Оригинальное аудио",
+  "likesText": "Нравится",
+  "discardEditsText": "Сбросить Изменения",
+  "discardText": "Сбросить",
+  "doneText": "Готово",
+  "tapToTypeText": "Нажмите, чтобы печатать...",
+  "uploadText": "Загрузить",
+  "loseAllEditsText": "Если вы вернетесь сейчас, вы потеряете все внесенные вами изменения.",
+  "successfullySavedText": "Успешно сохранено",
+  "saveDraft": "Сохранить черновик",
+  "draftEmpty": "Черновик пустой",
+  "errorText": "Ошибка",
+  "noPostsText": "Публикаций пока нет",
+  "noPostFoundText": "Публикация не найдена!",
+  "noChatsText": "Нет чатов!",
+  "startChatText": "Создать чат",
+  "addCommentText": "Добавить комментарий",
+  "deleteCommentText": "Удалить комментарий",
+  "commentDeleteConfirmationText": "Вы уверены что хотите удалить этот комментарий?",
+  "deleteMessageText": "Удалить сообщение",
+  "messageDeleteConfirmationText": "Вы уверены что хотите удалить это сообщение?",
+  "deleteChatText": "Удалить чат",
+  "chatDeleteConfirmationText": "Вы уверены что хотите удалить этот чат?",
+  "deleteReelText": "Удалить видео Reels",
+  "reelDeleteConfirmationText": "Вы уверены что хотите удалить это видео Reels?",
+  "deleteStoryText": "Удалить историю",
+  "storyDeleteConfirmationText": "Вы уверены что хотите удалить эту историю?",
+  "commentText": "Комментарий",
+  "commentsText": "Комментарии",
+  "noCommentsText": "Нет комментариев",
+  "seeAllComments": "Смотреть все коментарии ({count})",
+  "@seeAllComments": {
+    "description": "Текст который показывает кол-во коментариев под данным постом",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "likesCountText": "Нравится: {count}",
+  "@likesCountText": {
+    "description": "Текст который показывает кол-во лайков у данного поста",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "likedByText": "Нравится {userName} {count, plural, =1{} other{и {count} другим}}",
+  "@likedByText": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "emil.zulufov"
+      },
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "likeText": "Нравится",
+  "unlikeText": "Не нравится",
+  "likesCountTextShort": "{count}",
+  "@likesCountTextShort": {
+    "description": "TТекст который показывает кол-во лайков у данного поста в коротком формате",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "yourStoryLabel": "Твоя история",
+  "@yourStoryLabel": {
+    "description": "Текст на главной странице под твоей историей"
+  },
+  "postsText": "Публикаций",
+  "profilePostsAppBarTitle": "Публикации",
+  "@profilePostsAppBarTitle": {
+    "description": "Текст для заголовка страницы со всеми публикациями пользователя"
+  },
+  "followUser": "Подписаться",
+  "followingUser": "Вы подписаны",
+  "followersText": "Подписчики",
+  "followingsText": "Подписки",
+  "followersCountText": "{count, plural, other{Подписчики: {count}}}",
+  "@followersCountText": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "followingsCountText": "{count, plural, other{Подписки: {count}}}",
+  "@followingsCountText": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "postsCount": "{count, plural, =1{Публикация} few{Публикации} other{Публикаций}}",
+  "@postsCount": {
+    "description": "Текст показыващий кол-во публикаций пользователя",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "followersCount": "{count, plural, =1{Подписчик} few{Подписчика} other{Подписчиков}}",
+  "@followersCount": {
+    "description": "Текст показывающий кол-во подписчиков пользователя",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "optionsText": "Настройки",
+  "viewProfileText": "Посмотреть профиль",
+  "editProfileText": "Редактировать профиль",
+  "editingText": "Редактирование",
+  "editPostText": "Редактировать публикацию",
+  "shareProfileText": "Поделиться профилем",
+  "sharePostText": "Поделиться",
+  "sharePostCaptionHintText": "Добавить сообщение...",
+  "sendText": "Отправить",
+  "sendSeparatelyText": "Отправить отдельно",
+  "addStoryText": "Добавить",
+  "followingsCount": "{count, plural, =1{Подписка} few{Подписки} other{Подписок}}",
+  "@followingsCount": {
+    "description": "Текст показывающий кол-во подписок пользователя",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "sponsoredPostText": "Реклама",
+  "@sponsoredPostText": {
+    "description": "Текст показывает что данный пост был продвинут автором как рекламный"
+  },
+  "visitSponsoredInstagramProfile": "Посетить профиль Instagram",
+  "visitSponsoredPostAuthorProfileText": "Открыть профиль Instagram",
+  "@visitSponsoredPostAuthorProfileText": {
+    "description": "Текст показанный на рекламном посте который сподвигает пользователя перейти на профиль автора"
+  },
+  "learnMoreAboutUserPromoText": "Узнать больше",
+  "@learnMoreAboutUserPromoText": {
+    "description": "Текст показанный на промо банере на странице автора"
+  },
+  "visitUserPromoWebsiteText": "Посетить сайт",
+  "@visitUserPromoWebsiteText": {
+    "description": "Текст показанный на промо банере на странице автора"
+  },
+  "cancelFollowingText": "Отменить подписку",
+  "@cancelFollowingText": {
+    "description": "Текст об отмене подписки"
+  },
+  "haveSeenAllRecentPosts": "Вы посмотрели все обновления",
+  "@haveSeenAllRecentPosts": {
+    "description": "Header text shown in divider block when user have seen all recent posts"
+  },
+  "haveSeenAllRecentPostsInPast3Days": "Вы посмотрели все новые публикации за последние 3 дн.",
+  "@haveSeenAllRecentPostsInPast3Days": {
+    "description": "Body text shown in divider block when user have seen all recent posts in past 3 days"
+  },
+  "suggestedForYouText": "Рекомендуемые публикации",
+  "@suggestedForYouText": {
+    "description": "Текст, отображаемый в предлагаемом блоке раздела."
+  },
+  "andText": "и",
+  "othersText": "{count, plural, =0{} other{ещё {count}}}",
+  "@othersText": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "newPostText": "Новая публикация",
+  "newAvatarImageText": "Новое фото аватара",
+  "writeCaptionText": "Добавить подпись...",
+  "logOutText": "Выйти",
+  "logOutConfirmationText": "Вы уверены что хотите выйти из аккаунта?",
+  "notShowAgainText": "Не показывать снова",
+  "blockPostAuthorText": "Заблокировать автора публикации",
+  "blockAuthorText": "Заблокировать автора",
+  "blockAuthorConfirmationText": "Вы уверены что хотите заблокировать этого автора?",
+  "blockText": "Заблокировать",
+  "refreshText": "Обновить",
+  "noReelsFoundText": "Видео Reels пока нет",
+  "publishText": "Отправить",
+  "searchText": "Поиск",
+  "somethingWentWrongText": "Что-то пошло не так!",
+  "failedToCreateStoryText": "Не удалось создать историю",
+  "successfullyCreatedStoryText": "История успешно создана!",
+  "createText": "Cоздать",
+  "reelText": "Видео Reels",
+  "postText": "Публикация",
+  "storyText": "История",
+  "removeText": "Удалить",
+  "removeFollowerText": "Удалить подписчика",
+  "removeFollowerConfirmationText": "Вы уверены что хотите удалить подписчика?",
+  "deletePostText": "Удалить публикацию",
+  "deletePostConfirmationText": "Вы уверены что хотите удальть эту публикацию?",
+  "cancelText": "Отмена",
+  "captionText": "Описание",
+  "noCameraFoundText": "Камера не найдена!",
+  "videoText": "ВИДЕО",
+  "photoText": "ФОТО",
+  "clearImagesText": "Очистить выбранные изображения",
+  "galleryText": "ГАЛЕРЕЯ",
+  "deletingText": "УДАЛИТЬ",
+  "notFoundingCameraText": "Дополнительная камера не найдена",
+  "holdButtonText": "Нажмите и удерживайте, чтобы записать",
+  "noMediaFound": "Галерея пуста",
+  "acceptAllPermissionsText": "Примите все необходимые разрешения!",
+  "addMessageText": "Сообщение",
+  "messageText": "Сообщение",
+  "editPictureText": "Изменить фото",
+  "requiredFieldText": "Это поле обязательно",
+  "passwordLengthErrorText": "Пароль должен содержать минимум {count, plural, =1{{count} символ} other{{count} символа}}",
+  "@passwordLengthErrorText": {
+    "placeholders": {
+      "characters": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "changeText": "Изменить",
+  "changePhotoText": "Изменить фото",
+  "fullNameEditDescription": "Помогите людям найти вашу учетную запись, используя имя, под которым вы известны: полное имя, псевдоним или название компании.\n\nВы можете изменить свое имя только дважды в течение 14 дней.",
+  "usernameEditDescription": "Вы сможете изменить свое имя пользователя обратно на {username} следующие 14 дней.",
+  "@usernameEditDescription": {
+    "placeholders": {
+      "username": {
+        "type": "String",
+        "example": "emil"
+      }
+    }
+  },
+  "profileInfoEditConfirmationText": "Вы уверены что хотите сменить {changeType} на {newUsername} ?",
+  "@profileInfoEditConfirmationText": {
+    "placeholders": {
+      "newUsername": {
+        "type": "String",
+        "example": "jorge"
+      },
+      "changeType": {
+        "type": "String",
+        "example": "username"
+      }
+    }
+  },
+  "profileInfoChangePeriodText": "Вы можете изменять {changeType} только дважды в {count, plural, =1{день} few{{count} дня} other{{count} дней}}.",
+  "@profileInfoChangePeriodText": {
+    "placeholders": {
+      "changeType": {
+        "type": "String",
+        "example": "username"
+      },
+      "count": {
+        "type": "int",
+        "example": "14"
+      }
+    }
+  },
+  "forgotPasswordText": "Забыли пароль?",
+  "recoveryPasswordText": "Восстановление пароля",
+  "orText": "Или",
+  "signInWithText": "Войти через {provider}",
+  "@signInWithText": {
+    "placeholders": {
+      "provider": {
+        "type": "String",
+        "example": "Google"
+      }
+    }
+  },
+  "goBackConfirmationText": "Вы уверены что хотите вернуться назад?",
+  "goBackText": "Вернуться назад",
+  "furtherText": "Далее",
+  "noLastMessagesText": "Нет последних сообщений",
+  "onlineText": "онлайн",
+  "moreText": "Ещё",
+  "noAccountText": "Ещё нет аккаунта?",
+  "alreadyHaveAccountText": "Уже есть аккаунт?",
+  "nameText": "Имя",
+  "usernameText": "Имя пользователя",
+  "forgotPasswordEmailConfirmationText": "Подтверждение учётной записи",
+  "verificationTokenSentText": "Код подтверждения отправлени на почту {email}",
+  "@verificationTokenSentText": {
+    "placeholders": {
+      "email": {
+        "type": "String",
+        "example": "johndale@gmail.com"
+      }
+    }
+  },
+  "emailText": "Почта",
+  "otpText": "Код",
+  "changePasswordText": "Поменять пароль",
+  "passwordText": "Пароль",
+  "newPasswordText": "Новый пароль",
+  "loginText": "Войти",
+  "signUpText": "Зарегестрироваться",
+  "bioText": "Биография",
+  "postUnavailableText": "Пост недоступен",
+  "postUnavailableDescriptionText": "Этот пост недоступен",
+  "editedText": "изменено",
+  "editText": "Редактировать",
+  "deleteText": "Удалить",
+  "replyText": "Ответить",
+  "replyToText": "В ответ {username}",
+  "@replyingToText": {
+    "placeholders": {
+      "username": {
+        "type": "String",
+        "example": "emil"
+      }
+    }
+  },
+  "themeText": "Тема",
+  "systemOption": "Системная",
+  "@systemOption": {
+    "description": "The option to use system-wide theme in the theme selector menu"
+  },
+  "lightModeOption": "Светлая",
+  "@lightModeOption": {
+    "description": "The option for light mode in the theme selector menu"
+  },
+  "darkModeOption": "Тёмная",
+  "@darkModeOption": {
+    "description": "The option for dark mode in the theme selector menu"
+  },
+  "languageText": "Язык",
+  "ruOptionText": "Русский",
+  "enOptionText": "Английский",
+  "secondsAgo": "{seconds, plural, =1{{seconds} секунду назад} few{{seconds} секунды назад} other{{seconds} секунд назад}}",
+  "@secondsAgo": {
+    "description": "Секунд назад",
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "minutesAgo": "{minutes, plural, =1{{minutes} минуту назад} few{{minutes} минуты назад} other{{minutes} минут назад}}",
+  "@minutesAgo": {
+    "description": "Минут назад",
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "hoursAgo": "{hours, plural, =1{{hours} час назад} few{{hours} часа назад} other{{hours} часов назад}}",
+  "@hoursAgo": {
+    "description": "Часов назад",
+    "placeholders": {
+      "hours": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "daysAgo": "{days, plural, =1{{days} день назад} few{{days} дня назад} other{{days} дней назад}}",
+  "@daysAgo": {
+    "description": "Дней назад",
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "weeksAgo": "{weeks, plural, =1{{weeks} неделю назад} few{{weeks} недели назад} other{{weeks} недель назад}}",
+  "@weeksAgo": {
+    "description": "Недель назад",
+    "placeholders": {
+      "weeks": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "monthsAgo": "{months, plural, =1{{months} месяц назад} few{{months} месяца назад} other{{months} месяцев назад}}",
+  "@monthsAgo": {
+    "description": "Месяцев назад",
+    "placeholders": {
+      "months": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "yearsAgo": "{years, plural, =1{{years} год назад} few{{years} года назад} other{{years} лет назад}}",
+  "@yearsAgo": {
+    "description": "Лет назад",
+    "placeholders": {
+      "years": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "networkError": "Произошла сетевая ошибка.\nПроверьте подключение и повторите попытку.",
+  "@networkError": {
+    "description": "Текст, отображаемый при возникновении сетевой ошибки."
+  },
+  "networkErrorButton": "Попробуйте ещё раз",
+  "@networkErrorButton": {
+    "description": "Текст, отображаемый на кнопке обновления при возникновении сетевой ошибки."
+  }
+}

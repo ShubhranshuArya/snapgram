@@ -26,17 +26,17 @@ class AppFlavor extends AppEnv {
         Env.supabaseUrl => switch (flavor) {
             Flavor.development => EnvDev.supabaseUrl,
             Flavor.production => EnvProd.supabaseUrl,
-            Flavor.staging => EnvStaging.supabaseUrl,
+            Flavor.staging => EnvProd.supabaseUrl,
           },
         Env.powerSyncUrl => switch (flavor) {
             Flavor.development => EnvDev.powerSyncUrl,
             Flavor.production => EnvProd.powerSyncUrl,
-            Flavor.staging => EnvStaging.powerSyncUrl,
+            Flavor.staging => EnvProd.powerSyncUrl,
           },
         Env.supabaseAnonKey => switch (flavor) {
             Flavor.development => EnvDev.supabaseAnonKey,
             Flavor.production => EnvProd.supabaseAnonKey,
-            Flavor.staging => EnvStaging.supabaseAnonKey,
+            Flavor.staging => EnvProd.supabaseAnonKey,
           },
         // Env.fcmServerKey => switch (flavor) {
         //     Flavor.development => EnvDev.fcmServerKey,
@@ -46,12 +46,12 @@ class AppFlavor extends AppEnv {
         Env.iOSClientId => switch (flavor) {
             Flavor.development => EnvDev.iOSClientId,
             Flavor.production => EnvProd.iOSClientId,
-            Flavor.staging => EnvStaging.iOSClientId,
+            Flavor.staging => EnvProd.iOSClientId,
           },
         Env.webClientId => switch (flavor) {
             Flavor.development => EnvDev.webClientId,
             Flavor.production => EnvProd.webClientId,
-            Flavor.staging => EnvStaging.webClientId,
+            Flavor.staging => EnvProd.webClientId,
           }
       };
 }

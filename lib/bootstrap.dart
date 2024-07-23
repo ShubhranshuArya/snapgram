@@ -2,41 +2,49 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:app_ui/app_ui.dart';
-import 'package:bloc/bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_remote_config_repository/firebase_remote_config_repository.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+import 'package:snapgram/app/app.dart';
+import 'package:snapgram/l10n/slang/translations.g.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:persistent_storage/persistent_storage.dart';
 import 'package:powersync_repository/powersync_repository.dart';
 import 'package:shared/shared.dart';
-import 'package:snapgram/app/di/di.dart';
-
 
 typedef AppBuilder = FutureOr<Widget> Function(
   PowerSyncRepository,
+  FirebaseMessaging,
+  SharedPreferences,
+  FirebaseRemoteConfigRepository,
 );
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
 
   @override
-  void onChange(BlocBase<dynamic> bloc, Change<dynamic> change) {
-    super.onChange(bloc, change);
-    logD('onChange(${bloc.runtimeType}, $change)');
-  }
-
-  @override
   void onError(BlocBase<dynamic> bloc, Object error, StackTrace stackTrace) {
-    logD('onError(${bloc.runtimeType}, $error, $stackTrace)');
+    log('onError ${bloc.runtimeType}', error: error, stackTrace: stackTrace);
     super.onError(bloc, error, stackTrace);
   }
 }
 
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp();
+
+  logI('Handling a background message: ${message.toMap()}');
+}
+
 Future<void> bootstrap(
   AppBuilder builder, {
-  required FirebaseOptions options,
   required AppFlavor appFlavor,
 }) async {
   FlutterError.onError = (details) {
-    log(details.exceptionAsString(), stackTrace: details.stack);
+    logE(details.exceptionAsString(), stackTrace: details.stack);
   };
 
   Bloc.observer = const AppBlocObserver();
@@ -49,13 +57,39 @@ Future<void> bootstrap(
 
       await Firebase.initializeApp();
 
-      final powerSyncRepository = PowerSyncRepository(env: appFlavor.getEnv,);
+      HydratedBloc.storage = await HydratedStorage.build(
+        storageDirectory: kIsWeb
+            ? HydratedStorage.webStorageDirectory
+            : await getTemporaryDirectory(),
+      );
+
+      final powerSyncRepository = PowerSyncRepository(env: appFlavor.getEnv);
       await powerSyncRepository.initialize();
 
-      runApp(await builder(powerSyncRepository));
+      final firebaseMessaging = FirebaseMessaging.instance;
+      FirebaseMessaging.onBackgroundMessage(
+        _firebaseMessagingBackgroundHandler,
+      );
+
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      final firebaseRemoteConfig = FirebaseRemoteConfig.instance;
+      final firebaseRemoteConfigRepository = FirebaseRemoteConfigRepository(
+        firebaseRemoteConfig: firebaseRemoteConfig,
+      );
 
       SystemUiOverlayTheme.setPortraitOrientation();
 
+      runApp(
+        TranslationProvider(
+          child: await builder(
+            powerSyncRepository,
+            firebaseMessaging,
+            sharedPreferences,
+            firebaseRemoteConfigRepository,
+          ),
+        ),
+      );
     },
     (error, stack) {
       logE(error.toString(), stackTrace: stack);

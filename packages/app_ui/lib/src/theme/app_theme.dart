@@ -1,7 +1,4 @@
 import 'package:app_ui/app_ui.dart';
-import 'package:app_ui/src/spacing/app_spacing.dart';
-import 'package:app_ui/src/typography/app_text_styles.dart';
-import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

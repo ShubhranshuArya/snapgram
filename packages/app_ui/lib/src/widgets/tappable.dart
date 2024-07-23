@@ -3,7 +3,6 @@
 import 'dart:ui';
 
 import 'package:app_ui/app_ui.dart';
-import 'package:app_ui/src/extension/text_style_extension.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
