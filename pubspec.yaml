@@ -14,7 +14,8 @@ dependencies:
   bloc:
   cached_memory_image:
   cached_network_image:
-  carousel_slider:
+  # carousel_slider: ^4.2.1
+  carousel_slider_plus: ^6.0.0
   chats_repository:
     path: packages/chats_repository
   collection:
@@ -107,5 +108,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
-# dependency_overrides:
-#   fading_edge_scrollview: ^4.1.1
+dependency_overrides:
+  fading_edge_scrollview: ^4.1.1

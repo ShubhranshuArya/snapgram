@@ -3,7 +3,7 @@
 import 'dart:async';
 
 import 'package:animations/animations.dart';
-// import 'package:firebase_remote_config_repository/firebase_remote_config_repository.dart';
+import 'package:firebase_remote_config_repository/firebase_remote_config_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:snapgram/app/app.dart';
@@ -18,10 +18,10 @@ import 'package:snapgram/stories/stories.dart';
 import 'package:snapgram/timeline/timeline.dart';
 import 'package:snapgram/user_profile/user_profile.dart';
 import 'package:go_router/go_router.dart';
-// import 'package:posts_repository/posts_repository.dart';
+import 'package:posts_repository/posts_repository.dart';
 import 'package:shared/shared.dart' hide FeedPage, ReelsPage;
-// import 'package:stories_editor/stories_editor.dart';
-// import 'package:stories_repository/stories_repository.dart';
+import 'package:stories_editor/stories_editor.dart';
+import 'package:stories_repository/stories_repository.dart';
 import 'package:user_repository/user_repository.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -38,7 +38,34 @@ GoRouter router(AppBloc appBloc) => GoRouter(
           path: '/users/:user_id',
           name: 'user_profile',
           parentNavigatorKey: _rootNavigatorKey,
-          // 
+          pageBuilder: (context, state) {
+            final userId = state.pathParameters['user_id']!;
+            final props = state.extra as UserProfileProps?;
+
+            return CustomTransitionPage(
+              key: state.pageKey,
+              child: BlocProvider(
+                create: (context) => CreateStoriesBloc(
+                  storiesRepository: context.read<StoriesRepository>(),
+                  firebaseRemoteConfigRepository:
+                      context.read<FirebaseRemoteConfigRepository>(),
+                ),
+                child: UserProfilePage(
+                  userId: userId,
+                  props: props ?? const UserProfileProps.build(),
+                ),
+              ),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return SharedAxisTransition(
+                  animation: animation,
+                  secondaryAnimation: secondaryAnimation,
+                  transitionType: SharedAxisTransitionType.horizontal,
+                  child: child,
+                );
+              },
+            );
+          },
         ),
         GoRoute(
           path: '/chats/:chat_id',
@@ -295,33 +322,33 @@ GoRouter router(AppBloc appBloc) => GoRouter(
                         ),
                       ],
                     ),
-                    // GoRoute(
-                    //   path: 'create_stories',
-                    //   name: 'create_stories',
-                    //   parentNavigatorKey: _rootNavigatorKey,
-                    //   pageBuilder: (context, state) {
-                    //     final onDone = state.extra as dynamic Function(String)?;
+                    GoRoute(
+                      path: 'create_stories',
+                      name: 'create_stories',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      pageBuilder: (context, state) {
+                        final onDone = state.extra as dynamic Function(String)?;
 
-                    //     return CustomTransitionPage(
-                    //       key: state.pageKey,
-                    //       child: StoriesEditor(
-                    //         onDone: onDone,
-                    //         storiesEditorLocalizationDelegate:
-                    //             storiesEditorLocalizationDelegate(context),
-                    //         galleryThumbnailQuality: 900,
-                    //       ),
-                    //       transitionsBuilder:
-                    //           (context, animation, secondaryAnimation, child) {
-                    //         return SharedAxisTransition(
-                    //           animation: animation,
-                    //           secondaryAnimation: secondaryAnimation,
-                    //           transitionType: SharedAxisTransitionType.scaled,
-                    //           child: child,
-                    //         );
-                    //       },
-                    //     );
-                    //   },
-                    // ),
+                        return CustomTransitionPage(
+                          key: state.pageKey,
+                          child: StoriesEditor(
+                            onDone: onDone,
+                            storiesEditorLocalizationDelegate:
+                                storiesEditorLocalizationDelegate(context),
+                            galleryThumbnailQuality: 900,
+                          ),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              transitionType: SharedAxisTransitionType.scaled,
+                              child: child,
+                            );
+                          },
+                        );
+                      },
+                    ),
                     GoRoute(
                       path: 'edit',
                       name: 'edit_profile',
@@ -369,79 +396,79 @@ GoRouter router(AppBloc appBloc) => GoRouter(
                         ),
                       ],
                     ),
-                    // GoRoute(
-                    //   path: 'posts',
-                    //   name: 'user_posts',
-                    //   parentNavigatorKey: _rootNavigatorKey,
-                    //   pageBuilder: (context, state) {
-                    //     final userId = state.uri.queryParameters['user_id']!;
-                    //     final index =
-                    //         (state.uri.queryParameters['index']!).parse.toInt();
+                    GoRoute(
+                      path: 'posts',
+                      name: 'user_posts',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      pageBuilder: (context, state) {
+                        final userId = state.uri.queryParameters['user_id']!;
+                        final index =
+                            (state.uri.queryParameters['index']!).parse.toInt();
 
-                    //     return CustomTransitionPage(
-                    //       key: state.pageKey,
-                    //       child: BlocProvider(
-                    //         create: (context) => UserProfileBloc(
-                    //           userId: userId,
-                    //           userRepository: context.read<UserRepository>(),
-                    //           postsRepository: context.read<PostsRepository>(),
-                    //         ),
-                    //         child: UserProfilePosts(
-                    //           userId: userId,
-                    //           index: index,
-                    //         ),
-                    //       ),
-                    //       transitionsBuilder:
-                    //           (context, animation, secondaryAnimation, child) {
-                    //         return SharedAxisTransition(
-                    //           animation: animation,
-                    //           secondaryAnimation: secondaryAnimation,
-                    //           transitionType:
-                    //               SharedAxisTransitionType.horizontal,
-                    //           child: child,
-                    //         );
-                    //       },
-                    //     );
-                    //   },
-                    // ),
-                    // GoRoute(
-                    //   path: 'statistics',
-                    //   name: 'user_statistics',
-                    //   parentNavigatorKey: _rootNavigatorKey,
-                    //   pageBuilder: (context, state) {
-                    //     final userId = state.uri.queryParameters['user_id']!;
-                    //     final tabIndex = state.extra! as int;
+                        return CustomTransitionPage(
+                          key: state.pageKey,
+                          child: BlocProvider(
+                            create: (context) => UserProfileBloc(
+                              userId: userId,
+                              userRepository: context.read<UserRepository>(),
+                              postsRepository: context.read<PostsRepository>(),
+                            ),
+                            child: UserProfilePosts(
+                              userId: userId,
+                              index: index,
+                            ),
+                          ),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              transitionType:
+                                  SharedAxisTransitionType.horizontal,
+                              child: child,
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    GoRoute(
+                      path: 'statistics',
+                      name: 'user_statistics',
+                      parentNavigatorKey: _rootNavigatorKey,
+                      pageBuilder: (context, state) {
+                        final userId = state.uri.queryParameters['user_id']!;
+                        final tabIndex = state.extra! as int;
 
-                    //     return CustomTransitionPage(
-                    //       key: state.pageKey,
-                    //       child: BlocProvider(
-                    //         create: (context) => UserProfileBloc(
-                    //           userId: userId,
-                    //           userRepository: context.read<UserRepository>(),
-                    //           postsRepository: context.read<PostsRepository>(),
-                    //         )
-                    //           ..add(const UserProfileSubscriptionRequested())
-                    //           ..add(
-                    //             const UserProfileFollowingsCountSubscriptionRequested(),
-                    //           )
-                    //           ..add(
-                    //             const UserProfileFollowersCountSubscriptionRequested(),
-                    //           ),
-                    //         child: UserProfileStatistics(tabIndex: tabIndex),
-                    //       ),
-                    //       transitionsBuilder:
-                    //           (context, animation, secondaryAnimation, child) {
-                    //         return SharedAxisTransition(
-                    //           animation: animation,
-                    //           secondaryAnimation: secondaryAnimation,
-                    //           transitionType:
-                    //               SharedAxisTransitionType.horizontal,
-                    //           child: child,
-                    //         );
-                    //       },
-                    //     );
-                    //   },
-                    // ),
+                        return CustomTransitionPage(
+                          key: state.pageKey,
+                          child: BlocProvider(
+                            create: (context) => UserProfileBloc(
+                              userId: userId,
+                              userRepository: context.read<UserRepository>(),
+                              postsRepository: context.read<PostsRepository>(),
+                            )
+                              ..add(const UserProfileSubscriptionRequested())
+                              ..add(
+                                const UserProfileFollowingsCountSubscriptionRequested(),
+                              )
+                              ..add(
+                                const UserProfileFollowersCountSubscriptionRequested(),
+                              ),
+                            child: UserProfileStatistics(tabIndex: tabIndex),
+                          ),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return SharedAxisTransition(
+                              animation: animation,
+                              secondaryAnimation: secondaryAnimation,
+                              transitionType:
+                                  SharedAxisTransitionType.horizontal,
+                              child: child,
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ],
                 ),
               ],

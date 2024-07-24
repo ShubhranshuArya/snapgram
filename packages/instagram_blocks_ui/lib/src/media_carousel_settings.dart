@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider_plus/carousel_slider_plus.dart';
 import 'package:flutter/material.dart' show BoxFit;
 import 'package:instagram_blocks_ui/instagram_blocks_ui.dart';
 
