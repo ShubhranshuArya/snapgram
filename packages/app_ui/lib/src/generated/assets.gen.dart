@@ -94,7 +94,7 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/instagram_text_logo.svg
   SvgGenImage get instagramTextLogo =>
-      const SvgGenImage('assets/images/instagram_text_logo.svg');
+      const SvgGenImage('assets/images/instagram_text_logo1.svg');
 
   /// File path: assets/images/placeholder.png
   AssetGenImage get placeholder =>

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>532669712992-rqok7ifoga54i431a1426mhqcu14c4u6.apps.googleusercontent.com</string>
+	<string>67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6</string>
+	<string>com.googleusercontent.apps.67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCULiL0K-J-T8XOWn52-MF_oA-YwRDvP58</string>
+	<string>AIzaSyC0kRa_zpYrGhdXYBtZlj_tshN-aHKX43g</string>
 	<key>GCM_SENDER_ID</key>
-	<string>532669712992</string>
+	<string>67737138623</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.devshubh69.snapgram.dev</string>
+	<string>com.devshubh69.snapgram</string>
 	<key>PROJECT_ID</key>
-	<string>snapgram-dev-4e0f0</string>
+	<string>snapgram-prod</string>
 	<key>STORAGE_BUCKET</key>
-	<string>snapgram-dev-4e0f0.appspot.com</string>
+	<string>snapgram-prod.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:532669712992:ios:ae700b6179777fb38f5105</string>
+	<string>1:67737138623:ios:fb738e38a957ec4bf01d0a</string>
 </dict>
 </plist>

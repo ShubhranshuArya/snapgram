@@ -544,8 +544,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = Snapgram;
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,7 +556,6 @@
 				PACKAGE_CONFIG = .dart_tool/package_config.json;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -639,8 +640,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = Snapgram;
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,7 +652,6 @@
 				PACKAGE_CONFIG = .dart_tool/package_config.json;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -729,8 +731,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = Snapgram;
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -739,7 +743,6 @@
 				PACKAGE_CONFIG = .dart_tool/package_config.json;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.67737138623-bvvhjlt3cmlm4cjem8ul90h2bvk46m6p;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -824,8 +827,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = "[DEV] Snapgram";
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -835,7 +840,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -917,8 +921,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = "[DEV] Snapgram";
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -927,7 +933,6 @@
 				PACKAGE_CONFIG = .dart_tool/package_config.json;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1009,8 +1014,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = "[DEV] Snapgram";
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1019,7 +1026,6 @@
 				PACKAGE_CONFIG = .dart_tool/package_config.json;
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.532669712992-rqok7ifoga54i431a1426mhqcu14c4u6;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1104,8 +1110,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-stg";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = "[STG] Snapgram";
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.744985366113-hbu8phli62npp4qn41r32vofte8knegv";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1115,7 +1123,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram.stg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.744985366113-hbu8phli62npp4qn41r32vofte8knegv;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1199,8 +1206,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-stg";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = "[STG] Snapgram";
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.744985366113-hbu8phli62npp4qn41r32vofte8knegv";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1210,7 +1219,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram.stg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.744985366113-hbu8phli62npp4qn41r32vofte8knegv;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1289,8 +1297,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-stg";
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = 232D9L44UR;
 				ENABLE_BITCODE = NO;
 				FLAVOR_APP_NAME = "[STG] Snapgram";
+				GOOGLE_INFO_URL = "com.googleusercontent.apps.744985366113-hbu8phli62npp4qn41r32vofte8knegv";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1300,7 +1310,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devshubh69.snapgram.stg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
-				GOOGLE_INFO_URL = com.googleusercontent.apps.744985366113-hbu8phli62npp4qn41r32vofte8knegv;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

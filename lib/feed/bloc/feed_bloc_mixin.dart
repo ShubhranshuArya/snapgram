@@ -313,8 +313,10 @@ mixin FeedBlocMixin on Bloc<FeedEvent, FeedState> {
     final sendPort = args[0] as SendPort;
     final hasMore = args[1] as bool;
     final blocks = args[2] as List<InstaBlock>;
-    final sponsoredBlocksListJson =
-        List<Map<String, dynamic>>.from(jsonDecode(args[3] as String) as List);
+
+    //TODO: ADD sponsored posts
+    // final sponsoredBlocksListJson =
+    //     List<Map<String, dynamic>>.from(jsonDecode(args[3] as String) as List);
 
     final random = Random();
 
@@ -324,8 +326,8 @@ mixin FeedBlocMixin on Bloc<FeedEvent, FeedState> {
     const skipRange = [1, 2, 3];
     var previousSkipRangeIs1 = false;
 
-    final sponsored =
-        sponsoredBlocksListJson.take(20).map(InstaBlock.fromJson).toList();
+    // final sponsored =
+    //     sponsoredBlocksListJson.take(20).map(InstaBlock.fromJson).toList();
 
     while (tempDataLength > 1) {
       final allowedSkipRange = switch ((previousSkipRangeIs1, tempDataLength)) {
@@ -335,7 +337,7 @@ mixin FeedBlocMixin on Bloc<FeedEvent, FeedState> {
         _ => skipRange,
       };
 
-      final randomSponsoredPost = sponsored[random.nextInt(sponsored.length)];
+      // final randomSponsoredPost = sponsored[random.nextInt(sponsored.length)];
 
       final randomSkipRange =
           allowedSkipRange[random.nextInt(allowedSkipRange.length)];
@@ -343,7 +345,7 @@ mixin FeedBlocMixin on Bloc<FeedEvent, FeedState> {
       previousSkipRangeIs1 = randomSkipRange == 1;
 
       tempBlocks = tempBlocks.sublist(randomSkipRange);
-      blocks.insert(blocks.length - tempBlocks.length, randomSponsoredPost);
+      // blocks.insert(blocks.length - tempBlocks.length, randomSponsoredPost);
       tempDataLength = tempBlocks.length;
     }
 

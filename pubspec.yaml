@@ -14,7 +14,6 @@ dependencies:
   bloc:
   cached_memory_image:
   cached_network_image:
-  # carousel_slider: ^4.2.1
   carousel_slider_plus: ^6.0.0
   chats_repository:
     path: packages/chats_repository
@@ -53,8 +52,8 @@ dependencies:
     path: packages/insta_blocks
   instagram_blocks_ui:
     path: packages/instagram_blocks_ui
-  # inview_notifier_list:
-  #   git: https://github.com/Gambley1/inview_notifier_list
+  inview_notifier_list:
+    git: https://github.com/Gambley1/inview_notifier_list
   json_annotation:
   lottie:
   notifications_repository:

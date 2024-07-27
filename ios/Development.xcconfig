@@ -2,3 +2,4 @@
 #include "Flutter/Generated.xcconfig"
 
 GOOGLESERVICE_INFO_PLIST = ${PROJECT_DIR}/Runner/Firebase/dev/GoogleService-Info.plist
+ 

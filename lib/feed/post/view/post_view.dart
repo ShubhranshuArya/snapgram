@@ -141,8 +141,7 @@ class PostLargeView extends StatelessWidget {
           withAdaptiveBorder: false,
         );
       },
-      postOptionsSettings: 
-      isOwner
+      postOptionsSettings: isOwner
           ? PostOptionsSettings.owner(
               onPostEdit: (block) => context.pushNamed(
                 'post_edit',
@@ -161,8 +160,7 @@ class PostLargeView extends StatelessWidget {
                     );
               },
             )
-          : 
-          const PostOptionsSettings.viewer(),
+          : const PostOptionsSettings.viewer(),
       onCommentsTap: (showFullSized) => context.showScrollableModal(
         showFullSized: showFullSized,
         pageBuilder: (scrollController, draggableScrollController) =>
