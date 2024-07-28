@@ -82,15 +82,47 @@ class BottomNavBar extends StatelessWidget {
       iconSize: 28,
       showSelectedLabels: false,
       showUnselectedLabels: false,
+      selectedItemColor: Colors.red,
       items: navigationBarItems
           .map(
             (e) => BottomNavigationBarItem(
-              icon: e.child ?? Icon(e.icon),
+              icon: _ColoredSvgIcon(
+                svg: e.child,
+                selectedColor: context.theme.primaryColor,
+                unselectedColor: Colors.grey,
+                isSelected: navigationShell.currentIndex ==
+                    navigationBarItems.indexOf(e),
+              ),
               label: e.label,
               tooltip: e.tooltip,
             ),
           )
           .toList(),
+    );
+  }
+}
+
+class _ColoredSvgIcon extends StatelessWidget {
+  const _ColoredSvgIcon({
+    required this.svg,
+    required this.selectedColor,
+    required this.unselectedColor,
+    required this.isSelected,
+  });
+
+  final Widget svg;
+  final Color selectedColor;
+  final Color unselectedColor;
+  final bool isSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return ColorFiltered(
+      colorFilter: ColorFilter.mode(
+        isSelected ? selectedColor : unselectedColor,
+        BlendMode.srcIn,
+      ),
+      child: svg,
     );
   }
 }

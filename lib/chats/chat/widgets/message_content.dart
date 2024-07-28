@@ -249,7 +249,7 @@ class MessageSharedPost extends StatelessWidget {
                     child: Builder(
                       builder: (_) {
                         if (sharedPost.isReel) {
-                          return Assets.icons.instagramReel.svg(
+                          return Assets.icons.reelNav.svg(
                             height: AppSize.iconSizeBig,
                             width: AppSize.iconSizeBig,
                             colorFilter: const ColorFilter.mode(
@@ -410,7 +410,7 @@ class MessageSharedReel extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  trailing: Assets.icons.instagramReel.svg(
+                  trailing: Assets.icons.reelNav.svg(
                     height: AppSize.iconSizeBig,
                     width: AppSize.iconSizeBig,
                     colorFilter: const ColorFilter.mode(
@@ -520,7 +520,7 @@ class MessageStatuses extends StatelessWidget {
         ),
         if (isMine) ...[
           if (message.isRead)
-            Assets.icons.check.svg(
+            Assets.icons.doubleTickChat.svg(
               height: AppSize.iconSizeSmall,
               width: AppSize.iconSizeSmall,
               colorFilter: ColorFilter.mode(
@@ -529,11 +529,15 @@ class MessageStatuses extends StatelessWidget {
               ),
             )
           else
-            Icon(
-              Icons.check,
-              size: AppSize.iconSizeSmall,
-              color: effectiveSecondaryTextColor,
-            ),
+          Assets.icons.tickChat.svg(
+              height: AppSize.iconSizeSmall,
+              width: AppSize.iconSizeSmall,
+              colorFilter: ColorFilter.mode(
+                effectiveSecondaryTextColor,
+                BlendMode.srcIn,
+              ),
+            )
+            
         ],
       ].spacerBetween(width: AppSpacing.xs),
     );

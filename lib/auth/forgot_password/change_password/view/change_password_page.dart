@@ -34,7 +34,7 @@ class ChangePasswordView extends StatelessWidget {
           title: Text(context.l10n.changePasswordText),
           centerTitle: false,
           leading: IconButton(
-            icon: Icon(Icons.adaptive.arrow_back),
+            icon: Icon(Icons.adaptive.arrow_back_rounded),
             onPressed: () => _confirmGoBack(context),
           ),
         ),

@@ -84,7 +84,7 @@ class UserListTile extends StatelessWidget {
           color: AppColors.grey,
         ),
       ),
-      trailing: const Icon(Icons.keyboard_arrow_right),
+      trailing: const Icon(Icons.keyboard_arrow_right_rounded),
       onTap: () => withResult
           ? context.pop(user.id)
           : context.pushNamed(

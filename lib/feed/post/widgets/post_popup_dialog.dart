@@ -232,7 +232,7 @@ class PopupDialogFooter extends StatelessWidget {
           ),
           SizedBox(
             key: sharePostKey,
-            child: const Icon(Icons.near_me_outlined, size: 28),
+            child: const Icon(Icons.near_me_rounded, size: 28),
           ),
           SizedBox(
             key: optionsKey,

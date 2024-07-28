@@ -404,7 +404,7 @@ class ChatSendMessageButton extends StatelessWidget {
       child: const FittedBox(
         child: Padding(
           padding: EdgeInsets.all(AppSpacing.md),
-          child: Icon(Icons.send),
+          child: Icon(Icons.send_rounded),
         ),
       ),
     );

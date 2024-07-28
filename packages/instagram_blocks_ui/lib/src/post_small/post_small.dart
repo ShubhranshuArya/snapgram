@@ -104,7 +104,7 @@ class _PostThumbnailImage extends StatelessWidget {
             ),
           ],
         ),
-        child: Assets.icons.instagramReel.svg(
+        child: Assets.icons.reelNav.svg(
           height: 22,
           width: 22,
           colorFilter: const ColorFilter.mode(

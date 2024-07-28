@@ -91,7 +91,7 @@ class _UserProfileViewState extends State<UserProfileView>
               subtitle: context.l10n.visitUserPromoWebsiteText,
             ),
       body: DefaultTabController(
-        length: 2,
+        length: 3,
         child: NestedScrollView(
           floatHeaderSlivers: true,
           controller: _controller,
@@ -113,18 +113,40 @@ class _UserProfileViewState extends State<UserProfileView>
                       SliverPersistentHeader(
                         pinned: !ModalRoute.of(context)!.isFirst,
                         delegate: _SliverAppBarDelegate(
-                          const TabBar(
+                          TabBar(
                             indicatorSize: TabBarIndicatorSize.tab,
                             padding: EdgeInsets.zero,
                             labelPadding: EdgeInsets.zero,
                             indicatorWeight: 1,
                             tabs: [
                               Tab(
-                                icon: Icon(Icons.grid_on),
+                                icon: Assets.icons.gridProfile.svg(
+                                  colorFilter: ColorFilter.mode(
+                                    context.theme.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                  height: AppSize.iconSizeSmall,
+                                ),
                                 iconMargin: EdgeInsets.zero,
                               ),
                               Tab(
-                                icon: Icon(Icons.person_outline),
+                                icon: Assets.icons.reelNav.svg(
+                                  colorFilter: ColorFilter.mode(
+                                    context.theme.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                  height: AppSize.iconSizeMedium,
+                                ),
+                                iconMargin: EdgeInsets.zero,
+                              ),
+                              Tab(
+                                icon: Assets.icons.tagUserProfile.svg(
+                                  colorFilter: ColorFilter.mode(
+                                    context.theme.primaryColor,
+                                    BlendMode.srcIn,
+                                  ),
+                                  height: AppSize.iconSizeMedium,
+                                ),
                                 iconMargin: EdgeInsets.zero,
                               ),
                             ],
@@ -140,6 +162,7 @@ class _UserProfileViewState extends State<UserProfileView>
           body: TabBarView(
             children: [
               PostsPage(sponsoredPost: props.sponsoredPost),
+              const UserProfileMentionedPostsPage(),
               const UserProfileMentionedPostsPage(),
             ],
           ),
@@ -444,9 +467,9 @@ class UserProfileAddMediaButton extends StatelessWidget {
         if (option == null) return;
         option.onTap(context);
       }),
-      child: const Icon(
-        Icons.add_box_outlined,
-        size: AppSize.iconSize,
+      child: Assets.icons.addNav.svg(
+        height: 26,
+        color: context.theme.primaryColor,
       ),
     );
   }

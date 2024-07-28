@@ -80,7 +80,7 @@ class ChatsAppBar extends StatelessWidget {
             if (participantId == null) return;
             createChat(participantId);
           },
-          child: const Icon(Icons.add, size: AppSize.iconSize),
+          child: const Icon(Icons.add_rounded, size: AppSize.iconSize),
         ),
       ],
     );

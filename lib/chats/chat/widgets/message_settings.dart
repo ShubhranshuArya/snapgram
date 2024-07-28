@@ -81,7 +81,7 @@ class MessageSettings extends Equatable {
               value: MessageAction.edit,
               child: ListTile(
                 contentPadding: EdgeInsets.zero,
-                leading: const Icon(Icons.edit_outlined),
+                leading: const Icon(Icons.mode_edit_outline_rounded),
                 title: Text(context.l10n.editText),
               ),
             ),

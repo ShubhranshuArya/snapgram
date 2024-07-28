@@ -288,7 +288,7 @@ class UserProfileAvatar extends StatelessWidget {
               ),
             ),
             child: Icon(
-              Icons.add,
+              Icons.add_rounded,
               size: isLarge ? AppSize.iconSizeSmall : AppSize.iconSizeXSmall,
             ),
           ),

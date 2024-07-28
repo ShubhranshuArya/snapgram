@@ -8,8 +8,9 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class $AssetsAnimationsGen {
   const $AssetsAnimationsGen();
@@ -25,15 +26,16 @@ class $AssetsAnimationsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/add-button.svg
-  SvgGenImage get addButton => const SvgGenImage('assets/icons/add-button.svg');
+  /// File path: assets/icons/add_nav.svg
+  SvgGenImage get addNav => const SvgGenImage('assets/icons/add_nav.svg');
 
   /// File path: assets/icons/chat_circle.svg
   SvgGenImage get chatCircle =>
       const SvgGenImage('assets/icons/chat_circle.svg');
 
-  /// File path: assets/icons/check.svg
-  SvgGenImage get check => const SvgGenImage('assets/icons/check.svg');
+  /// File path: assets/icons/double_tick_chat.svg
+  SvgGenImage get doubleTickChat =>
+      const SvgGenImage('assets/icons/double_tick_chat.svg');
 
   /// File path: assets/icons/github.svg
   SvgGenImage get github => const SvgGenImage('assets/icons/github.svg');
@@ -41,15 +43,28 @@ class $AssetsIconsGen {
   /// File path: assets/icons/google.svg
   SvgGenImage get google => const SvgGenImage('assets/icons/google.svg');
 
-  /// File path: assets/icons/instagram-reel.svg
-  SvgGenImage get instagramReel =>
-      const SvgGenImage('assets/icons/instagram-reel.svg');
+  /// File path: assets/icons/grid_profile.svg
+  SvgGenImage get gridProfile =>
+      const SvgGenImage('assets/icons/grid_profile.svg');
+
+  /// File path: assets/icons/home_nav.svg
+  SvgGenImage get homeNav => const SvgGenImage('assets/icons/home_nav.svg');
+
+  /// File path: assets/icons/reel_nav.svg
+  SvgGenImage get reelNav => const SvgGenImage('assets/icons/reel_nav.svg');
 
   /// File path: assets/icons/search.svg
   SvgGenImage get search => const SvgGenImage('assets/icons/search.svg');
 
   /// File path: assets/icons/setting.svg
   SvgGenImage get setting => const SvgGenImage('assets/icons/setting.svg');
+
+  /// File path: assets/icons/tag_user_profile.svg
+  SvgGenImage get tagUserProfile =>
+      const SvgGenImage('assets/icons/tag_user_profile.svg');
+
+  /// File path: assets/icons/tick_chat.svg
+  SvgGenImage get tickChat => const SvgGenImage('assets/icons/tick_chat.svg');
 
   /// File path: assets/icons/trash.svg
   SvgGenImage get trash => const SvgGenImage('assets/icons/trash.svg');
@@ -63,14 +78,18 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
-        addButton,
+        addNav,
         chatCircle,
-        check,
+        doubleTickChat,
         github,
         google,
-        instagramReel,
+        gridProfile,
+        homeNav,
+        reelNav,
         search,
         setting,
+        tagUserProfile,
+        tickChat,
         trash,
         user,
         verifiedUser
@@ -94,7 +113,7 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/instagram_text_logo.svg
   SvgGenImage get instagramTextLogo =>
-      const SvgGenImage('assets/images/instagram_text_logo1.svg');
+      const SvgGenImage('assets/images/instagram_text_logo.svg');
 
   /// File path: assets/images/placeholder.png
   AssetGenImage get placeholder =>
@@ -126,11 +145,18 @@ class Assets {
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName);
+  const AssetGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  });
 
   final String _assetName;
 
   static const String package = 'app_ui';
+
+  final Size? size;
+  final Set<String> flavors;
 
   Image image({
     Key? key,
@@ -204,9 +230,22 @@ class AssetGenImage {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName);
+  const SvgGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = false;
+
+  const SvgGenImage.vec(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = true;
 
   final String _assetName;
+  final Size? size;
+  final Set<String> flavors;
+  final bool _isVecFormat;
 
   static const String package = 'app_ui';
 
@@ -224,19 +263,32 @@ class SvgGenImage {
     WidgetBuilder? placeholderBuilder,
     String? semanticsLabel,
     bool excludeFromSemantics = false,
-    SvgTheme theme = const SvgTheme(),
+    SvgTheme? theme,
     ColorFilter? colorFilter,
     Clip clipBehavior = Clip.hardEdge,
     @deprecated Color? color,
     @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
     @deprecated bool cacheColorFilter = false,
   }) {
-    return SvgPicture.asset(
-      _assetName,
+    final BytesLoader loader;
+    if (_isVecFormat) {
+      loader = AssetBytesLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+      );
+    } else {
+      loader = SvgAssetLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+        theme: theme,
+      );
+    }
+    return SvgPicture(
+      loader,
       key: key,
       matchTextDirection: matchTextDirection,
-      bundle: bundle,
-      package: package,
       width: width,
       height: height,
       fit: fit,
@@ -245,10 +297,8 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      theme: theme,
-      colorFilter: colorFilter,
-      color: color,
-      colorBlendMode: colorBlendMode,
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );

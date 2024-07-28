@@ -227,8 +227,8 @@ class _ShowSuggestedPeopleButtonState extends State<ShowSuggestedPeopleButton> {
   Widget build(BuildContext context) {
     return UserProfileButton(
       onTap: () => setState(() => _showPeople = !_showPeople),
-      child: Icon(
-        _showPeople ? Icons.person_add_rounded : Icons.person_add_outlined,
+      child: const Icon(
+        Icons.person_add_rounded,
         size: 20,
       ),
     );

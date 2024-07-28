@@ -179,7 +179,7 @@ class NoReelsFound extends StatelessWidget {
                     ),
                     child: Row(
                       children: <Widget>[
-                        const Icon(Icons.refresh),
+                        const Icon(Icons.refresh_rounded),
                         Text(
                           context.l10n.refreshText,
                           style: context.labelLarge,

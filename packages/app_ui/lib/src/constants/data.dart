@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs
+import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shared/shared.dart';
 
 /// Navigation bar items
@@ -12,23 +14,42 @@ List<NavBarItem> mainNavigationBarItems({
   required Widget userProfileAvatar,
 }) =>
     <NavBarItem>[
-      NavBarItem(icon: Icons.home_filled, label: homeLabel),
-      NavBarItem(icon: Icons.search, label: searchLabel),
-      NavBarItem(icon: Icons.add_box_outlined, label: createMediaLabel),
-      NavBarItem(icon: Icons.video_collection_outlined, label: reelsLabel),
-      NavBarItem(child: userProfileAvatar, label: userProfileLabel),
+      NavBarItem(
+          child: Assets.icons.homeNav.svg(
+            height: AppSize.iconSizeBig,
+          ),
+          label: homeLabel),
+      NavBarItem(
+          child: Assets.icons.search.svg(
+            height: AppSize.iconSize,
+          ),
+          label: searchLabel),
+      NavBarItem(
+          child: Assets.icons.addNav.svg(
+            height: AppSize.iconSize,
+          ),
+          label: createMediaLabel),
+      NavBarItem(
+          child: Assets.icons.reelNav.svg(
+            height: AppSize.iconSize,
+          ),
+          label: reelsLabel),
+      NavBarItem(
+        child: Assets.icons.user.svg(
+          height: AppSize.iconSizeBig,
+        ),
+        label: userProfileLabel,
+      ),
     ];
 
 class NavBarItem {
   NavBarItem({
-    this.icon,
+    required this.child,
     this.label,
-    this.child,
   });
 
   final String? label;
-  final Widget? child;
-  final IconData? icon;
+  final Widget child;
 
   String? get tooltip => label;
 }
