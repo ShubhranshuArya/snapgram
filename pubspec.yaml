@@ -103,9 +103,16 @@ dev_dependencies:
   mocktail:
   slang_build_runner:
   very_good_analysis:
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
   generate: true
 dependency_overrides:
   fading_edge_scrollview: ^4.1.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "packages/app_ui/assets/images/snapgram_icon.png"
+  min_sdk_android: 21
