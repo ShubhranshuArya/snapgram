@@ -231,7 +231,7 @@ class SignUpCubit extends Cubit<SignupState> {
         );
       }
 
-      final pushToken = await _notificationsClient.fetchToken();
+      // final pushToken = await _notificationsClient.fetchToken();
 
       await _userRepository.signUpWithPassword(
         email: email.value,
@@ -239,7 +239,7 @@ class SignUpCubit extends Cubit<SignupState> {
         fullName: fullName.value,
         username: username.value,
         avatarUrl: imageUrlResponse,
-        pushToken: pushToken,
+        // pushToken: pushToken,
       );
 
       if (isClosed) return;

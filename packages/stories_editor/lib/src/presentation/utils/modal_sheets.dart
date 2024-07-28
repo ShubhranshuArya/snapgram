@@ -108,8 +108,7 @@ Future<bool?> exitDialog({
                         context: context,
                         saveToGallery: true,
                       );
-                      //TODO: Added type bool
-                      if (response as bool) {
+                      if (response) {
                         _dispose(
                           context: context,
                           message: StoriesEditorLocalization()

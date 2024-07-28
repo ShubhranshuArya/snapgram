@@ -52,20 +52,19 @@ class _TopToolsState extends State<TopTools> with SafeSetStateMixin {
                     )),
                 if (controlNotifier.mediaPath.isEmpty)
                   _selectColor(
-                    controlProvider: controlNotifier,
-                    onTap: () {
-                      if (controlNotifier.gradientIndex >=
-                          controlNotifier.gradientColors!.length - 1) {
-                        safeSetState(() {
-                          controlNotifier.gradientIndex = 0;
-                        });
-                      } else {
-                        safeSetState(() {
-                          controlNotifier.gradientIndex += 1;
-                        });
-                      }
-                    },
-                  ),
+                      controlProvider: controlNotifier,
+                      onTap: () {
+                        if (controlNotifier.gradientIndex >=
+                            controlNotifier.gradientColors!.length - 1) {
+                          safeSetState(() {
+                            controlNotifier.gradientIndex = 0;
+                          });
+                        } else {
+                          safeSetState(() {
+                            controlNotifier.gradientIndex += 1;
+                          });
+                        }
+                      }),
                 ToolButton(
                     backGroundColor: Colors.black12,
                     onTap: () async {
@@ -76,17 +75,16 @@ class _TopToolsState extends State<TopTools> with SafeSetStateMixin {
                           context: context,
                           saveToGallery: true,
                         );
-                        //TODO: added type bool
-                        if (response as bool) {
-                          await Fluttertoast.showToast(
-                            msg: StoriesEditorLocalization()
-                                .delegate
-                                .successfullySavedText,
-                          );
+                        if (response) {
+                          Fluttertoast.showToast(
+                              msg: StoriesEditorLocalization()
+                                  .delegate
+                                  .successfullySavedText);
                         } else {
-                          await Fluttertoast.showToast(
-                            msg: StoriesEditorLocalization().delegate.errorText,
-                          );
+                          Fluttertoast.showToast(
+                              msg: StoriesEditorLocalization()
+                                  .delegate
+                                  .errorText);
                         }
                       }
                     },
@@ -139,10 +137,7 @@ class _TopToolsState extends State<TopTools> with SafeSetStateMixin {
   }
 
   /// gradient color selector
-  Widget _selectColor({
-    required void Function() onTap,
-    controlProvider,
-  }) {
+  Widget _selectColor({onTap, controlProvider}) {
     return Padding(
       padding: const EdgeInsets.only(left: 5, right: 5, top: 8),
       child: AnimatedOnTapButton(
@@ -158,13 +153,10 @@ class _TopToolsState extends State<TopTools> with SafeSetStateMixin {
             height: 30,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: controlProvider
-                        .gradientColors![controlProvider.gradientIndex]
-                    as List<Color>,
-                    // TODO: Added type to colors
-              ),
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: controlProvider
+                      .gradientColors![controlProvider.gradientIndex]),
               shape: BoxShape.circle,
             ),
           ),

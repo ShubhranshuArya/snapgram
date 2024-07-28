@@ -133,7 +133,7 @@ class _TextEditorState extends State<TextEditor> {
         ));
   }
 
-  void _onTap(BuildContext context, ControlNotifier controlNotifier,
+  void _onTap(context, ControlNotifier controlNotifier,
       TextEditingNotifier editorNotifier) {
     final editableItemNotifier =
         Provider.of<DraggableWidgetNotifier>(context, listen: false);

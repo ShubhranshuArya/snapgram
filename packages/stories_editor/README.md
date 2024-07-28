@@ -1,62 +1,237 @@
-# Stories Editor
+## I won't be giving support or any update for a while because i don't have time to spend in this project.
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
-[![License: MIT][license_badge]][license_link]
+## Flutter version 3.3.6
 
-A Very Good Project created by Very Good CLI.
+## Previous branches was deleted (4-Nov-2022)
 
-## Installation 💻
+if you want to make a ull request you must be using the new "main" branch, the problems with gallery, overflow design were solved and the function to create Gif / mp4 was removed due to performance issues.
 
-**❗ In order to start using Stories Editor you must have the [Dart SDK][dart_install_link] installed on your machine.**
+# flutter stories editor
 
-Install via `dart pub add`:
+This is a package created in the style of the instagram story creator, with which you can create images with images, texts, finger drawing. They can be exported as an image to the gallery or shared directly to social networks.
 
-```sh
-dart pub add stories_editor
+## Features
+
+[✔️] Draggable image
+
+[✔️] Draggable text
+
+[✔️] Gradient container background
+
+[✔️] Finger painting (normal/translucent/neon)
+
+[✔️] Custom colors, gradients and font families
+
+[✔️] Custom gallery picker (own package => [gallery_media_picker](https://pub.dev/packages/gallery_media_picker))
+
+[✔️] Save draft as image
+
+[✔️] Get draft local path uri
+
+[✔️] Text animations => [animated_text_kit](https://pub.dev/packages/animated_text_kit)
+
+## Future features
+
+[❌] Save draft as a gif / video
+
+[❌] Color filters
+
+## Demo
+
+If you don't see the images go to the [github repository](https://github.com/camilo1498/stories_editor) and by the way give me a star :D
+
+<p float="left"> 
+   <img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/demo.gif" alt="showcase gif" title="custom view" width="200"/>
+   <img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/text_animations.gif" alt="showcase gif" title="custom view" width="200"/> 
+</p>
+
+## Installation
+
+_This package has been tested in Android and ios, some features works on flutter web_
+
+Add `stories_editor: 0.1.8` to your `pubspec.yaml` dependencies and then import it.
+
+```dart
+import 'package:stories_editor/stories_editor.dart';
 ```
 
----
+## How to use
 
-## Continuous Integration 🤖
+1.  ### Android
 
-Stories Editor comes with a built-in [GitHub Actions workflow][github_actions_link] powered by [Very Good Workflows][very_good_workflows_link] but you can also add your preferred CI/CD solution.
+        add uses-permission `AndroidManifest.xml` file
+        `xml
 
-Out of the box, on each pull request and push, the CI `formats`, `lints`, and `tests` the code. This ensures the code remains consistent and behaves correctly as you add functionality or make changes. The project uses [Very Good Analysis][very_good_analysis_link] for a strict set of analysis options used by our team. Code coverage is enforced using the [Very Good Workflows][very_good_coverage_link].
+     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+         android:maxSdkVersion="31" />
+     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.VIBRATE"/>
+    `
 
----
+        ### ios
 
-## Running Tests 🧪
+        add this config to your `config.plist`
+        `xml
 
-To run all unit tests:
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Privacy - Photo Library Usage Description</string>
+    <key>NSMotionUsageDescription</key>
+    <string>Motion usage description</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>NSPhotoLibraryAddUsageDescription</string>
+    `
 
-```sh
-dart pub global activate coverage 1.2.0
-dart test --coverage=coverage
-dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info
+2.  Create a `StoriesEditor()` widget with the follow params:
+
+```dart
+StoriesEditor(
+    onDone: (String ur){
+      /// uri is the local path of final render Uint8List
+      /// here your code
+    },
+    colorList: [] /// (List<Color>[]) optional param
+    gradientColors: [] /// (List<List<Color>>[]) optional param
+    middleBottomWidget: Container() /// (Widget) optional param, you can add your own logo or text in the bottom tool
+    fontFamilyList: [] /// (List<String>) optional param
+    isCustomFontList: '' /// (bool) if you use a own font list set value to "true"
+    onDoneButtonStyle: Container() /// (Widget) optional param, you can create your own button style
+    onBackPress: /// (Future<bool>) optional param, here you can add yor own style dialog
+    editorBackgroundColor: /// (Color) optional param, you can define your own background editor color
+    galleryThumbnailQuality: /// (int = 200) optional param, you can set the gallery thumbnail quality (higher is better but reduce the performance)
+);
 ```
 
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
+## Example
 
-```sh
-# Generate Coverage Report
-genhtml coverage/lcov.info -o coverage/
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:stories_editor/stories_editor.dart';
 
-# Open Coverage Report
-open coverage/index.html
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter stories editor Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+      home: const Example(),
+    );
+  }
+}
+
+class Example extends StatefulWidget {
+  const Example({Key? key}) : super(key: key);
+
+
+
+  @override
+  State<Example> createState() => _ExampleState();
+}
+
+class _ExampleState extends State<Example> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black,
+        resizeToAvoidBottomInset: false,
+        body: Center(
+          child: ElevatedButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => StoriesEditor(
+                onDone: (uri){
+                  debugPrint(uri);
+                  Share.shareFiles([uri]);
+                },
+              ))
+              );
+            },
+            child: const Text('Open Stories Editor'),
+          ),
+        )
+    );
+  }
+}
+
 ```
 
-[dart_install_link]: https://dart.dev/get-dart
-[github_actions_link]: https://docs.github.com/en/actions/learn-github-actions
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[logo_black]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_black.png#gh-light-mode-only
-[logo_white]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_white.png#gh-dark-mode-only
-[mason_link]: https://github.com/felangel/mason
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
-[very_good_coverage_link]: https://github.com/marketplace/actions/very-good-coverage
-[very_good_ventures_link]: https://verygood.ventures
-[very_good_ventures_link_light]: https://verygood.ventures#gh-light-mode-only
-[very_good_ventures_link_dark]: https://verygood.ventures#gh-dark-mode-only
-[very_good_workflows_link]: https://github.com/VeryGoodOpenSource/very_good_workflows
+### Issues
+
+1. Issue of photo*View: [photo_view#499](bluefireteam/photo_view#499)
+   Issue log => \_To safely refer to a widget ancestor in its dispose() method, save a reference to the ancestor by calling dependOnInheritedWidgetOfExactType() in the widget didChangeDependencies() method.*
+
+## ScreenShots
+
+initial view
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/1.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/2.jpg" width="130" height="250">
+</p>
+
+Custom image picker made with [Photo_manager](https://pub.dev/packages/photo_manager) package
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/3.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/4.jpg" width="130" height="250">
+</p>
+
+Gradient background taking image color pixel
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/20.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/21.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/22.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/23.jpg" width="130" height="250">
+</p>
+
+Exit Dialog
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/5.jpg" width="130" height="250">
+</p>
+
+Custom finger Drawing made with [perfect_freehand](https://pub.dev/packages/perfect_freehand) package
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/14.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/24.jpg" width="130" height="250">
+</p>
+
+Text Editor
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/10.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/11.jpg" width="130" height="250">
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/12.jpg" width="130" height="250">
+</p>
+
+All features together
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/17.jpg" width="130" height="250">
+</p>
+
+Share to social networks made with [share_plus](https://pub.dev/packages/share_plus) package
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/19.jpg" width="130" height="250">
+</p>
+
+Saved image
+
+<p float="left"> 
+<img src="https://github.com/camilo1498/stories_editor/blob/main/stories%20editor%20screenshots/18.jpg" width="130" height="250">
+</p>

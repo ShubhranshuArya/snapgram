@@ -115,18 +115,16 @@ class DraggableWidget extends StatelessWidget {
     /// set widget data position on main screen
     return AnimatedAlignPositioned(
       duration: const Duration(milliseconds: 50),
-      //TODO: Added type as double
       dy: (draggableWidget.deletePosition
-          ? _deleteTopOffset() as double
+          ? _deleteTopOffset()
           : (draggableWidget.position.dy * screenUtil.screenHeight)),
       dx: (draggableWidget.deletePosition
           ? 0
           : (draggableWidget.position.dx * screenUtil.screenWidth)),
       alignment: Alignment.center,
       child: Transform.scale(
-        //TODO: Added type as double
         scale: draggableWidget.deletePosition
-            ? _deleteScale() as double
+            ? _deleteScale()
             : draggableWidget.scale,
         child: Transform.rotate(
           angle: draggableWidget.rotation,
@@ -149,24 +147,18 @@ class DraggableWidget extends StatelessWidget {
       required PaintingStyle paintingStyle,
       bool background = false}) {
     if (draggableWidget.animationType == TextAnimationType.none) {
-      return Text(
-        draggableWidget.text,
-        textAlign: draggableWidget.textAlign,
-        style: _textStyle(
-          controlNotifier: controlNotifier,
-          paintingStyle: paintingStyle,
-          background: background,
-        ) as TextStyle?,
-        //TODO: Added type TextStyle?
-      );
+      return Text(draggableWidget.text,
+          textAlign: draggableWidget.textAlign,
+          style: _textStyle(
+              controlNotifier: controlNotifier,
+              paintingStyle: paintingStyle,
+              background: background));
     } else {
       return DefaultTextStyle(
         style: _textStyle(
-          controlNotifier: controlNotifier,
-          paintingStyle: paintingStyle,
-          background: background,
-        ) as TextStyle,
-        //TODO: Added type TextStyle
+            controlNotifier: controlNotifier,
+            paintingStyle: paintingStyle,
+            background: background),
         child: AnimatedTextKit(
           repeatForever: true,
           onTap: () => _onTap(context, draggableWidget, controlNotifier),

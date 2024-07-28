@@ -108,8 +108,7 @@ class BottomTools extends StatelessWidget {
                               saveToGallery: false,
                             ).then((bytes) {
                               if (bytes != null) {
-                                //TODO: Added type string
-                                pngUri = bytes as String;
+                                pngUri = bytes;
                                 onDone(pngUri);
                               }
                             });

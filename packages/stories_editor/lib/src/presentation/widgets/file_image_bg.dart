@@ -56,8 +56,8 @@ class _FileImageBGState extends State<FileImageBG> with SafeSetStateMixin {
         stateController: stateController,
       ).searchPixel(
           Offset(imageKey.currentState!.context.size!.width / 2.03, 530));
-      color1 = cd1 as Color;
-      color2 = cd12 as Color;
+      color1 = cd1;
+      color2 = cd12;
       safeSetState(() {});
       widget.generatedGradient(color1, color2);
       callback.cancel();

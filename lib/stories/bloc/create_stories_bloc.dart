@@ -35,8 +35,10 @@ class CreateStoriesBloc extends Bloc<CreateStoriesEvent, CreateStoriesState> {
     CreateStoriesIsFeatureAvailableSubscriptionRequested event,
     Emitter<CreateStoriesState> emit,
   ) async {
-    final storiesEnabled = _firebaseRemoteConfigRepository
-        .isFeatureAvailable('enable_create_stories');
+    //TODO: Add FCM key
+    final storiesEnabled = true;
+    // _firebaseRemoteConfigRepository
+    //     .isFeatureAvailable('enable_create_stories');
     emit(state.copyWith(isAvailable: storiesEnabled));
 
     await emit.onEach(
