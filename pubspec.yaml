@@ -60,7 +60,7 @@ dependencies:
     path: packages/notifications_repository
   ogp_data_extract:
   palette_generator:
-  path_provider:
+  path_provider: 2.1.4
   persistent_storage:
     path: packages/storage/persistent_storage
   posts_repository:
