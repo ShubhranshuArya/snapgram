@@ -7,7 +7,7 @@ void main() {
       'id': 'b6faca71-061c-4f05-93f0-d164baacca3d',
       'author': {
         'id': '67c36f68-3b92-4e11-89e9-cd7a22f3c37b',
-        'username': 'emil.zulufov',
+        'username': 'arya.shubhranshu',
         'avatar_url':
             'https://wefeasvyrksvvywqgchk.supabase.co/storage/v1/object/public/avatars/126a526e-0ada-4144-90aa-30a4d3185844/avatar?t=1699129094691',
         'is_confirmed': true,
@@ -17,7 +17,7 @@ void main() {
         {
           'media_id': uuid.v4(),
           'url':
-              'https://blog.nursing.com/hs-fs/hubfs/visual%20nursing%20app.webp?width=1080&height=1080&name=visual%20nursing%20app.webp',
+              'https://vlulrshezhiqhvjegtmm.supabase.co/storage/v1/object/sign/avatars/promotion_img.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL3Byb21vdGlvbl9pbWcuanBnIiwiaWF0IjoxNzIyMjA0NzYwLCJleHAiOjE3NTM3NDA3NjB9.vDb7ezUqBpmoFRZM7Da09x_WalLP7OHErQAO-mF7oOo&t=2024-07-28T22%3A12%3A40.214Z',
           'type': ImageMedia.identifier,
         },
       ],
@@ -35,7 +35,7 @@ void main() {
       'id': '0bcf4fa1-2a58-4809-b07b-5654e32e6fc2',
       'author': {
         'id': '67c36f68-3b92-4e11-89e9-cd7a22f3c37b',
-        'username': 'emil.zulufov',
+        'username': 'arya.shubhranshu',
         'avatar_url':
             'https://wefeasvyrksvvywqgchk.supabase.co/storage/v1/object/public/avatars/126a526e-0ada-4144-90aa-30a4d3185844/avatar?t=1699129094691',
         'is_confirmed': true,
@@ -63,7 +63,7 @@ void main() {
       'id': '4071ae1f-7e64-43d7-9763-4ced3b84dcfc',
       'author': {
         'id': '67c36f68-3b92-4e11-89e9-cd7a22f3c37b',
-        'username': 'emil.zulufov',
+        'username': 'arya.shubhranshu',
         'avatar_url':
             'https://wefeasvyrksvvywqgchk.supabase.co/storage/v1/object/public/avatars/126a526e-0ada-4144-90aa-30a4d3185844/avatar?t=1699129094691',
         'is_confirmed': true,
@@ -91,7 +91,7 @@ void main() {
       'id': '4f6a8b3f-07f6-4b33-a9fe-2420f750fe31',
       'author': {
         'id': '67c36f68-3b92-4e11-89e9-cd7a22f3c37b',
-        'username': 'emil.zulufov',
+        'username': 'arya.shubhranshu',
         'avatar_url':
             'https://wefeasvyrksvvywqgchk.supabase.co/storage/v1/object/public/avatars/126a526e-0ada-4144-90aa-30a4d3185844/avatar?t=1699129094691',
         'is_confirmed': true,

@@ -127,6 +127,10 @@ class $AssetsImagesGen {
   AssetGenImage get snapgramIcon =>
       const AssetGenImage('assets/images/snapgram_icon.png');
 
+  /// File path: assets/images/snapgram_splash_icon.png
+  AssetGenImage get snapgramSplashIcon =>
+      const AssetGenImage('assets/images/snapgram_splash_icon.png');
+
   /// List of all assets
   List<dynamic> get values => [
         chatBackgroundLightMask,
@@ -135,7 +139,8 @@ class $AssetsImagesGen {
         instagramTextLogo,
         placeholder,
         profilePhoto,
-        snapgramIcon
+        snapgramIcon,
+        snapgramSplashIcon
       ];
 }
 

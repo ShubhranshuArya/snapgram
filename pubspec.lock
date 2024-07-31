@@ -54,6 +54,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.11"
+  ansicolor:
+    dependency: transitive
+    description:
+      name: ansicolor
+      sha256: "8bf17a8ff6ea17499e40a2d2542c2f481cd7615760c6d34065cb22bfd22e6880"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   app_links:
     dependency: transitive
     description:
@@ -809,6 +817,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.3"
+  flutter_native_splash:
+    dependency: "direct dev"
+    description:
+      name: flutter_native_splash
+      sha256: aa06fec78de2190f3db4319dd60fdc8d12b2626e93ef9828633928c2dcaea840
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -1101,10 +1117,10 @@ packages:
     dependency: transitive
     description:
       name: image_picker_android
-      sha256: "8c3168469b005a6dbf5ba01f795917ae4f4e71077d3d7f2049a0d25a4760393e"
+      sha256: "3fe99e3a459b969f657565a853353bdea7e3d3cae34f7dd124836267d426ec87"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.12+8"
+    version: "0.8.12+10"
   image_picker_for_web:
     dependency: transitive
     description:
@@ -1623,10 +1639,10 @@ packages:
     dependency: transitive
     description:
       name: powersync
-      sha256: "26d9cf469d5fb93797e55b2a4cb6000ef104e2bf9f61686b2ff3eb4d7fcf93ee"
+      sha256: "4fba86ae8e27360b15b2fd9d39113b7ea8ea714e445ced91b79b57ba21c8e377"
       url: "https://pub.dev"
     source: hosted
-    version: "1.6.0"
+    version: "1.6.1"
   powersync_flutter_libs:
     dependency: transitive
     description:
@@ -2156,10 +2172,10 @@ packages:
     dependency: transitive
     description:
       name: url_launcher_android
-      sha256: c24484594a8dea685610569ab0f2547de9c7a1907500a9bc5e37e4c9a3cbfb23
+      sha256: "678979703e10d7862c551c736fe6b9f185261bddf141b46672063b99790bc700"
       url: "https://pub.dev"
     source: hosted
-    version: "6.3.6"
+    version: "6.3.7"
   url_launcher_ios:
     dependency: transitive
     description:

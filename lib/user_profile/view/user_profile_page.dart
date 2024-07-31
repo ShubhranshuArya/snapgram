@@ -363,7 +363,7 @@ class UserProfileSettingsButton extends StatelessWidget {
     return Tappable(
       onTap: () => context.showListOptionsModal(
         options: [
-          ModalOption(child: const LocaleModalOption()),
+          // ModalOption(child: const LocaleModalOption()),
           ModalOption(child: const ThemeSelectorModalOption()),
           ModalOption(child: const LogoutModalOption()),
         ],

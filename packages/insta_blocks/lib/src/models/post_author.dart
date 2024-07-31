@@ -12,7 +12,7 @@ const _confirmedUsers = <User>[
     avatarUrl:
         'https://img.freepik.com/premium-photo/cartoon-character-with-blue-shirt-glasses_561641-2084.jpg?size=626&ext=jpg',
     email: 'emilzulufov@gmail.com',
-    username: 'emil.zulufov',
+    username: 'arya.shubhranshu',
     fullName: 'Emil Zulufov',
   ),
   User(
