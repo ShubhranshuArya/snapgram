@@ -9,17 +9,17 @@ SnapGram is an offline-first Flutter app for Android and iOS, inspired by Instag
 - [License](#-license)
 - [Contact](#-connect-with-me)
 
-## Features
+## 🎉 Features
 
-### Authentication
+### SnapGram Profile
+- Scrollable grid view with multiple tabs
+- Vertical scrolling for post-viewing
+- Profile editing: photo, name, username, and bio
+- Followers and following lists
+- Theme settings: dark, light, or system
+- Logout functionality
 
-<img src="https://github.com/user-attachments/assets/fa0a3b23-fb93-4afc-a3f6-541ecb712970" width="250" />
-
-- Email and password authentication
-- Google login integration
-- GitHub login integration
-
-### Stories
+### SnapGram Stories
 - Create and view stories similar to Instagram
 - Customization options:
   - Random background colors
@@ -30,33 +30,45 @@ SnapGram is an offline-first Flutter app for Android and iOS, inspired by Instag
 - Save stories as drafts
 - Edit or delete stories
 
-### Home Feed
+| SnapGram Profile | SnapGram Stories |
+| --- | --- |
+| <img src="https://github.com/user-attachments/assets/9b28e540-3298-406a-b7e6-2c8164467514" width="250" /> | <img src="https://github.com/user-attachments/assets/4959f764-1fda-4525-9ef4-8a5aa4343a64" width="250" />  | 
+
+### SnapGram Feed
 - Reactive stories list indicating viewed/unviewed status
 - Double-tap to like posts
 - User interaction options: block/restrict users, save posts
 - Sponsored posts controlled by Firebase Cloud Messaging
 
-### Search
+### SnapGram FYP
 - Staggered view of content
 - Long-press actions: comment, share, view profile
 - Fast semantic user search
 
-### Media Upload
+| SnapGram Feed | SnapGram FYP |
+| --- | --- |
+| <img src="https://github.com/user-attachments/assets/954615bc-8383-4f11-b813-3816f88173f3" width="250" /> | <img src="https://github.com/user-attachments/assets/762c615c-b6eb-492f-8927-ac3ad0887024" width="250" />  |
+
+### SnapGram Uploads
 - Shimmer effect while loading device images
 - Support for live photos and videos
-- Multiple media selection for posts
+- Multiple media selections for posts
 - Image cropping functionality
 - Caption addition
-- Post editing and deletion
+- Post-editing and deletion
 
-### Reels
+### SnapGram Reels
 - Scrollable video format
 - Double-tap to like
 - Comment and reply functionality
 - Easy sharing with followers
 - Long-press to pause, mute option available
 
-### Chat
+| SnapGram Uploads | SnapGram Reels |
+| --- | --- |
+| <img src="https://github.com/user-attachments/assets/158e1936-3b27-49b9-ac93-ccb88c023e9e" width="250" /> | <img src="https://github.com/user-attachments/assets/48347d38-0ac4-4d75-9bcf-9410f0a22161" width="250" />  |
+
+### SnapGram Chat
 - End-to-end implementation
 - Scroll-to-bottom feature
 - Dynamic theme changes while scrolling
@@ -65,13 +77,14 @@ SnapGram is an offline-first Flutter app for Android and iOS, inspired by Instag
 - User search for new conversations
 - Chat deletion option
 
-### Profile
-- Scrollable grid view with multiple tabs
-- Vertical scrolling for post viewing
-- Profile editing: photo, name, username, and bio
-- Followers and following lists
-- Theme settings: dark, light, or system
-- Logout functionality
+### SnapGram Auth
+- Email and password authentication
+- Google login integration
+- GitHub login integration
+
+| SnapGram Chat | SnapGram Auth |
+| --- | --- |
+| <img src="https://github.com/user-attachments/assets/67c03eea-7ffa-47b4-a596-5574691fc755" width="250" /> | <img src="https://github.com/user-attachments/assets/fafcd165-145f-45c3-97ee-e346667ec836" width="250" />  |
 
 ## ⚡️ Built With
 
@@ -109,3 +122,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 * Twitter - [@shubhranshuarya](https://twitter.com/shubhranshuarya)
 * LinkedIn - [Shubhranshu Arya](https://www.linkedin.com/in/shubhranshu-arya/)
 * Email - [shubhranshuarya@gmail.com](shubhranshuarya@gmail.com)
+
+## Thanks for sticking till the end!!
