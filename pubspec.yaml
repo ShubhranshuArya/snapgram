@@ -73,7 +73,7 @@ dependencies:
   shared:
     path: packages/shared
   shimmer:
-  slang:
+  slang: 3.31.2
   slang_flutter:
   sliver_tools:
   sprung:
