@@ -45,7 +45,7 @@ dependencies:
   get_it:
   go_router:
   google_sign_in: ^6.2.1
-  gotrue: ^2.8.3
+  gotrue: ^2.10.0
   hydrated_bloc:
   intl:
   insta_blocks:
