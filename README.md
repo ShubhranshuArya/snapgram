@@ -1,4 +1,6 @@
 # SnapGram
+![snap-banner-1](https://github.com/user-attachments/assets/bf6f24bf-5bd3-43bc-a4c7-a4d23333a259)
+
 
 SnapGram is an offline-first Flutter app for Android and iOS, inspired by Instagram. It offers a rich set of features for social media interaction, photo and video sharing, and communication.
 
